@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gullak - Smart Savings App</title>
+    <meta name="description" content="Gullak - A multilingual, voice-interactive savings app that helps you develop better saving habits with gamified rewards and accessibility features." />
+    <meta name="keywords" content="savings, financial planning, voice commands, multilingual, accessibility, UPI, rewards" />
+    <meta name="theme-color" content="#3B82F6" />
+    
+    <!-- Accessibility and SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Gullak Team" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gullak-app.com/" />
+    <meta property="og:title" content="Gullak - Smart Savings App" />
+    <meta property="og:description" content="A multilingual, voice-interactive savings app that helps you develop better saving habits." />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://gullak-app.com/" />
+    <meta property="twitter:title" content="Gullak - Smart Savings App" />
+    <meta property="twitter:description" content="A multilingual, voice-interactive savings app that helps you develop better saving habits." />
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+      /* Critical CSS for initial render */
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #EBF8FF 0%, #E0E7FF 100%);
+        min-height: 100vh;
+      }
+      
+      /* Loading state */
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-size: 18px;
+        color: #4F46E5;
+      }
+      
+      /* High contrast mode support */
+      @media (prefers-contrast: high) {
+        body {
+          background: #ffffff;
+          color: #000000;
+        }
+      }
+      
+      /* Reduced motion support */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      
+      /* Focus visible for keyboard navigation */
+      .focus-visible {
+        outline: 2px solid #3B82F6;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="loading">
+        <div>Loading Gullak...</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Screen reader announcements -->
+    <div id="sr-announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+  </body>
+</html>
